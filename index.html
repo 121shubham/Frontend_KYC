@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registration.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registration</h1>
+        <form action="/register" method="POST" enctype="multipart/form-data" class="registration-form">
+            
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone"><i class="fas fa-phone"></i> Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="course"><i class="fas fa-book"></i> Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">Select Course</option>
+                    <option value="course1">Course 1</option>
+                    <option value="course2">Course 2</option>
+                    <option value="course3">Course 3</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="lead_owner"><i class="fas fa-user-tie"></i> Lead Owner:</label>
+                <select id="lead_owner" name="lead_owner" required>
+                    <option value="">Select Lead Owner</option>
+                    <option value="course1">lead_owner 1</option>
+                    <option value="course2">lead_owner 2</option>
+                    <option value="course3">lead_owner 3</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="state"><i class="fas fa-map-marker-alt"></i> State:</label>
+                <input type="text" id="state" name="state" placeholder="Enter your state" required>
+            </div>
+
+            <div class="form-group">
+                <label for="city"><i class="fas fa-city"></i> City:</label>
+                <input type="text" id="city" name="city" placeholder="Enter your city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address"><i class="fas fa-home"></i> Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pincode"><i class="fas fa-map-pin"></i> Pin Code:</label>
+                <input type="text" id="pincode" name="pincode" placeholder="Enter your pin code" required>
+            </div>
+
+            <div class="form-group">
+                <label for="aadhar"><i class="fas fa-id-card"></i> Aadhar Number:</label>
+                <input type="text" id="aadhar" name="aadhar" placeholder="Enter Aadhar number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="aadhar_photo"><i class="fas fa-image"></i> Upload Aadhar Photo:</label>
+                <input type="file" id="aadhar_photo" name="aadhar_photo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pan"><i class="fas fa-id-card-alt"></i> PAN Number:</label>
+                <input type="text" id="pan" name="pan" placeholder="Enter PAN number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pan_photo"><i class="fas fa-file-upload"></i> Upload PAN Photo:</label>
+                <input type="file" id="pan_photo" name="pan_photo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="photo"><i class="fas fa-camera"></i> Upload Photo:</label>
+                <input type="file" id="photo" name="photo" required>
+            </div>
+
+            <div class="form-submit">
+                <button type="submit"><i class="fas fa-paper-plane"></i> Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html> 
