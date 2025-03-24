@@ -1,0 +1,163 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    background: #8ca3cb;
+    padding-top: 20px;
+    color: white;
+    transition: 0.3s;
+}
+
+.sidebar-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar .nav-item {
+    margin: 15px 0;
+}
+
+.sidebar .nav-link {
+    color: white;
+    padding: 10px;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+/* Table Styles */
+.table-responsive {
+    max-height: 500px;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(243, 246, 246, 0.1);
+    position: relative; /* Required for fixed buttons */
+}
+
+.table thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+/* Blue Table Header */
+.table-blue#thead {
+    background-color: #0ee47c; /* Blue color */
+    color: rgb(192, 20, 20); /* Ensure text is readable */
+}
+
+img.img-fluid {
+    max-width: 80px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(54, 24, 188, 0.1);
+}
+
+/* Fixed Buttons at Bottom-Right */
+.button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000; /* Ensure buttons are above other elements */
+}
+
+.button-container .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-container .btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.button-container .btn-danger:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+.button-container .btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.button-container .btn-success:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100px;
+    }
+
+    .sidebar .nav-link {
+        text-align: center;
+    }
+
+    .sidebar .nav-link i {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .content {
+        margin-left: 100px;
+    }
+
+    .button-container {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+/* Animated Background */
+body {
+    background: linear-gradient(135deg, #f1f2f4, #eff1f6);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Bubble Animation */
+@keyframes moveBubbles {
+    0% { transform: translateY(0px); opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+.bubble {
+    position: absolute;
+    bottom: -10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: moveBubbles 10s linear infinite;
+}
+
+.bubble:nth-child(1) { width: 20px; height: 20px; left: 10%; animation-duration: 8s; }
+.bubble:nth-child(2) { width: 30px; height: 30px; left: 25%; animation-duration: 10s; }
+.bubble:nth-child(3) { width: 40px; height: 40px; left: 50%; animation-duration: 12s; }
+.bubble:nth-child(4) { width: 25px; height: 25px; left: 75%; animation-duration: 9s; }
+.bubble:nth-child(5) { width: 35px; height: 35px; left: 90%; animation-duration: 7s; }

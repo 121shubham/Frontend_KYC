@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    background: linear-gradient(45deg, #FF8C00, #FFA500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Form Styles */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.form-group label i {
+    margin-right: 8px;
+    color: #FF8C00;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #FF8C00;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.4);
+}
+
+.form-group input[type="file"] {
+    padding: 8px;
+    background-color: #f9f9f9;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-submit button {
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #FF8C00, #FFA500);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.form-submit button:hover {
+    background: linear-gradient(45deg, #E07B00, #FF8C00);
+    transform: scale(1.05);
+}
+
+.form-group label[for="lead_owner"] .fas {
+    font-size: 15px;  
+    color: #FF8C00;  /* Use a blue shade */
+    /* padding-right: 8px; */
+}
+
+.form-group select#lead_owner {
+    width: 625px;
+    height: 44px;
+    font-size: 14px;
+    /* padding: 10px; */
+}
+
+.form-group select#course {
+    width: 625px;
+    height: 44px;
+    font-size: 14px;
+    /* padding: 10px; */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-group input, .form-group select {
+        padding: 10px;
+    }
+    .form-submit button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
